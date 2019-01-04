@@ -172,7 +172,7 @@ Let's consider the problem DAPLink has to solve. It sees 512 byte block of data 
 at a particular block index on the device. It needs to decide if it's part of the file being
 flashed and if so, extract the data and write it to the target chip.
 
-Note that that if the block is part of the file content, it will come from an offset in the
+Note that if the block is part of the file content, it will come from an offset in the
 file divisible by 512 (due to FAT file system design).
 The task would be simplified then, if every 512 block of the file being
 flashed was easy to distinguish from meta-data or other random files, and easy

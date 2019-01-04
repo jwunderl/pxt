@@ -6,10 +6,10 @@ Assistive technologies, specifically screen readers, describe to the user what a
 
 Test MakeCode with several screen readers to ensure that it is accessible on all platforms:
 
-* **Voice Over** (included with Mac). Test with with Safari, Chrome and FireFox on Mac.
+* **Voice Over** (included with Mac). Test with Safari, Chrome and FireFox on Mac.
 * [NVDA](https://www.nvaccess.org/) (for Windows). Try this with Chrome and FireFox.
 * **Narrator** (included with Windows). Check it with IE and Microsoft Edge.
-* [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS). This is the the most widely used screen reader on Windows (primarily with FireFox).
+* [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS). This is the most widely used screen reader on Windows (primarily with FireFox).
 
 ### ~hint
 

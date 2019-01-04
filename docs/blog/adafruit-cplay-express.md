@@ -64,7 +64,7 @@ Have fun Making Code for Minecraft!
 
 #### - MakeCode Team
 
-PS - This is a Beta release, there are some features that we are still working on which will be coming shortly, such as support for for the Infrared receiver and transmitter.
+PS - This is a Beta release, there are some features that we are still working on which will be coming shortly, such as support for the Infrared receiver and transmitter.
 
 PPS - We will be down at [Maker Faire Bay Area](http://makerfaire.com/bay-area/) this weekend building Circuit Playground Express Magic Wands, and raffling off some Circuit Playground Express boards with our friends at [Hackster](https://www.hackster.io/).  Please come by and say Hi if you’ll be there, and follow us on [Twitter](https://twitter.com/MSMakeCode) for the giveaway details!
 
