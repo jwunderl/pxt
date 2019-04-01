@@ -402,7 +402,7 @@ namespace pxt.blocks {
     }
 
     function initBlock(block: Blockly.Block, info: pxtc.BlocksInfo, fn: pxtc.SymbolInfo, comp: pxt.blocks.BlockCompileInfo) {
-        const ns = (fn.attributes.blockNamespace || fn.namespace).split('.')[0];
+        const ns = ts.pxtc.blocksCategory(fn);
         const instance = fn.kind == pxtc.SymbolKind.Method || fn.kind == pxtc.SymbolKind.Property;
         const nsinfo = info.apis.byQName[ns];
         const color =

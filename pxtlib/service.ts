@@ -619,8 +619,9 @@ namespace ts.pxtc {
         function filterCategories(banned: string[]) {
             if (banned.length) {
                 blocks = blocks.filter(b => {
-                    let ns = (b.attributes.blockNamespace || b.namespace).split('.')[0];
-                    return banned.indexOf(ns) === -1;
+                    let ns = (b.attributes.blockNamespace || b.namespace).split('.')[0].toLowerCase();
+                    // return banned.indexOf(ns) === -1;
+                    return !!banned.filter(bannedCategory => bannedCategory.toLowerCase() != ns).length;
                 });
             }
         }

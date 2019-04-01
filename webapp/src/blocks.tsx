@@ -1001,7 +1001,7 @@ export class Editor extends toolboxeditor.ToolboxEditor {
         }
 
         pxt.blocks.injectBlocks(this.blockInfo).forEach(fn => {
-            let ns = (fn.attributes.blockNamespace || fn.namespace).split('.')[0];
+            const ns = ts.pxtc.blocksCategory(fn);
 
             if (!res[ns]) {
                 res[ns] = [];
@@ -1532,7 +1532,7 @@ export class Editor extends toolboxeditor.ToolboxEditor {
         function shouldShowBlock(fn: pxtc.SymbolInfo) {
             if (fn.attributes.debug && !pxt.options.debug) return false;
             if (!shadow && (fn.attributes.deprecated || fn.attributes.blockHidden)) return false;
-            let ns = (fn.attributes.blockNamespace || fn.namespace).split('.')[0];
+            let ns = ts.pxtc.blocksCategory(fn);
             return that.shouldShowBlock(fn.attributes.blockId, ns);
         }
     }

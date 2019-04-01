@@ -296,7 +296,7 @@ namespace pxt.runner {
                 let res: pxt.Map<string> = {};
                 const info = r.compileBlocks.blocksInfo;
                 info.blocks.forEach(fn => {
-                    const ns = (fn.attributes.blockNamespace || fn.namespace).split('.')[0];
+                    const ns = ts.pxtc.blocksCategory(fn);
                     if (!res[ns]) {
                         const nsn = info.apis.byQName[ns];
                         if (nsn && nsn.attributes.color)

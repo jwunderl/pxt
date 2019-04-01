@@ -1005,7 +1005,7 @@ export class Editor extends toolboxeditor.ToolboxEditor {
         }
 
         this.blockInfo.blocks.forEach(fn => {
-            let ns = (fn.attributes.blockNamespace || fn.namespace).split('.')[0];
+            let ns = ts.pxtc.blocksCategory(fn);
 
             // Don't add the block if there exists a block with the same definition
             if (builtInBlocks[fn.qName]) return;
@@ -1233,7 +1233,7 @@ export class Editor extends toolboxeditor.ToolboxEditor {
                 const fn = this.blockInfo.apis.byQName[block.name];
                 if (fn) {
                     if (fn.name.indexOf('_') == 0) return;
-                    const ns = (fn.attributes.blockNamespace || fn.namespace).split('.')[0];
+                    const ns = ts.pxtc.blocksCategory(fn);
                     const color = fn.attributes.color || getNamespaceColor(ns);
                     monacoBlocks.push(this.getMonacoBlock(fn, ns, color));
                 } else {

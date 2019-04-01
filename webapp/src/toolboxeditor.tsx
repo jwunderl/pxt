@@ -69,7 +69,7 @@ export abstract class ToolboxEditor extends srceditor.Editor {
 
             // Go through all blocks and apply filter
             this.blockInfo.blocks.forEach(fn => {
-                let ns = (fn.attributes.blockNamespace || fn.namespace).split('.')[0];
+                let ns = ts.pxtc.blocksCategory(fn);
 
                 if (fn.attributes.debug && !pxt.options.debug) return;
                 if (fn.attributes.deprecated || fn.attributes.blockHidden) return;
